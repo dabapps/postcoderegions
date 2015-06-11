@@ -1,5 +1,14 @@
-# postcoderegions
-JSON API to find regions for UK postcodes
+# Postcode Regions
+JSON API to find regions for UK postcodes.
+
+A call like: `http://127.0.0.1:5000/?postcode=bn11ag` will return:
+
+    {
+      "postcode": "BN11AG",
+      "region": "South East",
+      "region_code": "E12000008"
+    }
+
 
 ## Installation
 
@@ -15,7 +24,7 @@ To run the server in development mode
 
 The repository includes the region database encoded using marisa-trie.
 
-New data can be downloaded from visiting `https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page` and searching for the most up-to-date version of `ONS Postcode Directory`.
+New data can be downloaded by visiting [https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page) and searching for the most up-to-date version of `ONS Postcode Directory`.
 
 The downloaded Zip will contain large csv file (ONSPD_MAY_2015_UK.csv). This should be edited into the following format (postcode, ONS Region):
 
@@ -23,6 +32,6 @@ The downloaded Zip will contain large csv file (ONSPD_MAY_2015_UK.csv). This sho
     | "AB10AB" | "S99999999" |
     | "AB10AD" | "S99999999" |
 
-You can then rebuild the data trie file by calling
+You can then rebuild the trie database file by calling
 
-    env/bin/python build_trie.py new-data-filename.csv
+    env/bin/python build_trie.py path/new-data-filename.csv
