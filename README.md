@@ -7,7 +7,7 @@ A call like: `http://127.0.0.1:5000/?postcode=bn11ag` will return:
       "postcode": "BN11AG",
       "region": "South East",
       "region_code": "E12000008",
-      "borough": "",
+      "borough": "",  # London Borough e.g. Camden
     }
 
 
