@@ -6,7 +6,8 @@ A call like: `http://127.0.0.1:5000/?postcode=bn11ag` will return:
     {
       "postcode": "BN11AG",
       "region": "South East",
-      "region_code": "E12000008"
+      "region_code": "E12000008",
+      "borough": "",
     }
 
 
@@ -35,3 +36,10 @@ The downloaded Zip will contain large csv file (ONSPD_MAY_2015_UK.csv). This sho
 You can then rebuild the trie database file by calling
 
     env/bin/python build_trie.py path/new-data-filename.csv
+
+In order to build the borough dataset a further build is required which involves 2 steps:
+
+   - Download borough csv files from https://www.ordnancesurvey.co.uk/business-and-government/products/code-point-open.html
+   - Run .borough_csv_processor.sh from within the directory which contains the csv files. Thsi will output a sigle boroughs.csv file
+   - Run  env/bin/python build_borough_trie.py ./boroughs.csv to build the optmized dataset.
+   
