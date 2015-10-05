@@ -1,6 +1,7 @@
-import sys
 import csv
 import marisa_trie
+import re
+import sys
 
 
 def rebuild(filename):
@@ -13,6 +14,7 @@ def rebuild(filename):
         csvreader = csv.reader(csvfile, delimiter=',')
         for line in csvreader:
             postcode = line[0].strip()
+            postcode = re.sub(r'\s+', '', postcode)
             borough_code = line[1].strip().encode('utf-8')  # values should be byte
             borough_data[postcode] = borough_code
 
