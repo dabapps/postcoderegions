@@ -3,7 +3,7 @@ import csv
 import marisa_trie
 
 
-def rebuild(filename)
+def rebuild(filename):
 
     print("Rebuilding trie based on borough CSV file: %s" % filename)
 
