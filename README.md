@@ -44,9 +44,8 @@ You can then rebuild the trie database file by calling
 
     env/bin/python build_trie.py path/new-data-filename.csv
 
-In order to build the borough dataset a further build is required which involves 2 steps:
+The London borough data is stored as a seperate trie and can be re-built using the follow commands:
 
-   - Download borough csv files from https://www.ordnancesurvey.co.uk/business-and-government/products/code-point-open.html
-   - Run .borough_csv_processor.sh from within the directory which contains the csv files. Thsi will output a sigle boroughs.csv file
-   - Run  env/bin/python build_borough_trie.py ./boroughs.csv to build the optmized dataset.
+    cut -d "," -f1,6 ONSPD_NOV_2016_UK.csv > new-borough-data.csv
+    env/bin/python build_borough_trie.py path/new-borough-data.csv
    
