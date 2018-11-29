@@ -49,3 +49,6 @@ The London borough data is stored as a seperate trie and can be re-built using t
     cut -d "," -f1,6 ONSPD_NOV_2016_UK.csv > new-borough-data.csv
     env/bin/python build_borough_trie.py path/new-borough-data.csv
    
+## Code of conduct
+
+For guidlines regarding the code of conduct when contributing to this repository please review https://www.dabapps.com/open-source/code-of-conduct/
