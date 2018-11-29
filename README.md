@@ -51,4 +51,4 @@ The London borough data is stored as a seperate trie and can be re-built using t
    
 ## Code of conduct
 
-For guidelines regarding the code of conduct when contributing to this repository please review https://www.dabapps.com/open-source/code-of-conduct/
+For guidelines regarding the code of conduct when contributing to this repository please review [https://www.dabapps.com/open-source/code-of-conduct/](https://www.dabapps.com/open-source/code-of-conduct/)
